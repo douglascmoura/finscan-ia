@@ -1,0 +1,13 @@
+data,categoria,descricao,valor,tipo
+2026-08-01,Moradia,Aluguel Residencial,1800.00,Despesa
+2026-08-02,Alimentação,Supermercado Mensal,950.00,Despesa
+2026-08-03,Transporte,Combustível e Estacionamento,350.00,Despesa
+2026-08-04,Saúde,Plano de Saúde,500.00,Despesa
+2026-08-05,Lazer,Restaurante no Fim de Semana,280.00,Despesa
+2026-08-06,Lazer,Assinaturas de Streaming e Mídia,120.00,Despesa
+2026-08-07,Lazer,Compras Pessoais e Vestuário,350.00,Despesa
+2026-08-08,Alimentação,Pedidos de Delivery,200.00,Despesa
+2026-08-09,Investimentos,Aporte Tesouro Selic,500.00,Investimento
+2026-08-10,Investimentos,Reserva Renda Fixa CDB,300.00,Investimento
+2026-08-11,Transporte,Aplicativo de Mobilidade,150.00,Despesa
+2026-08-12,Saúde,Farmácia e Vitaminas,200.00,Despesa

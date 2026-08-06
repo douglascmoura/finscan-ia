@@ -1,0 +1,14 @@
+{
+  "regra": "50-30-20",
+  "descricao": "Metodologia clássica de divisão orçamentária",
+  "metas_percentuais": {
+    "necessidades": 50.0,
+    "desejos": 30.0,
+    "economias_investimentos": 20.0
+  },
+  "mapeamento_categorias": {
+    "necessidades": ["Moradia", "Alimentação", "Transporte", "Saúde"],
+    "desejos": ["Lazer"],
+    "economias_investimentos": ["Investimentos"]
+  }
+}
