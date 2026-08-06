@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FinScan - Assistente Virtual de IA para Análise de Perfil Financeiro Pessoal e Regra 50-30-20">
+    <title>FinScan | Analista de Perfil Financeiro IA</title>
+
+    <!-- Fontes Principais (Google Fonts: Inter & Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilização Dark Luxury & Glassmorphism -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Iluminação Atmosférica de Fundo (Glow Blurs) -->
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+    <div class="background-glow glow-3"></div>
+
+    <div class="app-container">
+        <!-- BARRA SUPERIOR (HEADER) EXECUTIVA -->
+        <header class="app-header glass-card-header">
+            <div class="brand">
+                <div class="logo-icon glow-pulse">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+                        <path d="M2 17L12 22L22 17" />
+                        <path d="M2 12L12 17L22 12" />
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <h1>FinScan <span class="badge-ai">AI 1.0</span></h1>
+                    <p>Analista de Perfil Financeiro Pessoal</p>
+                </div>
+            </div>
+
+            <!-- CAMPO DE API KEY COM ÍCONE TWOTONE EMBUTIDO E CONTROLES DE SEGURANÇA -->
+            <div class="api-key-header-box">
+                <div class="input-wrapper">
+                    <svg class="input-icon api-twotone-svg" width="18" height="18" viewBox="0 0 1024 1024" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" fill-opacity=".3"
+                            d="M254.9 582.3c-25 25-38.7 58.1-38.7 93.4s13.8 68.5 38.7 93.4c25 25 58.1 38.7 93.4 38.7s68.5-13.8 93.4-38.7l59.4-59.4l-186.8-186.8zm420.8-366.1c-35.3 0-68.5 13.8-93.4 38.7l-59.4 59.4l186.8 186.8l59.4-59.4c24.9-25 38.7-58.1 38.7-93.4s-13.8-68.5-38.7-93.4c-25-25-58.1-38.7-93.4-38.7" />
+                        <path fill="currentColor"
+                            d="M578.9 546.7a8.03 8.03 0 0 0-11.3 0L501 613.3L410.7 523l66.7-66.7c3.1-3.1 3.1-8.2 0-11.3L441 408.6a8.03 8.03 0 0 0-11.3 0L363 475.3l-43-43a7.85 7.85 0 0 0-5.7-2.3c-2 0-4.1.8-5.7 2.3L206.8 534.2a199.45 199.45 0 0 0-58.6 140.4c-.2 39.5 11.2 79.1 34.3 113.1l-76.1 76.1a8.03 8.03 0 0 0 0 11.3l42.4 42.4c1.6 1.6 3.6 2.3 5.7 2.3s4.1-.8 5.7-2.3l76.1-76.1c33.7 22.9 72.9 34.3 112.1 34.3c51.2 0 102.4-19.5 141.5-58.6l101.9-101.9c3.1-3.1 3.1-8.2 0-11.3l-43-43l66.7-66.7c3.1-3.1 3.1-8.2 0-11.3zM441.7 769.1a131.32 131.32 0 0 1-93.4 38.7c-35.3 0-68.4-13.7-93.4-38.7c-24.9-24.9-38.7-58.1-38.7-93.4s13.7-68.4 38.7-93.4l59.4-59.4l186.8 186.8zm476-620.3l-42.4-42.4c-1.6-1.6-3.6-2.3-5.7-2.3s-4.1.8-5.7 2.3l-76.1 76.1a199.27 199.27 0 0 0-112.1-34.3c-51.2 0-102.4 19.5-141.5 58.6L432.3 308.7a8.03 8.03 0 0 0 0 11.3L704 591.7c1.6 1.6 3.6 2.3 5.7 2.3c2 0 4.1-.8 5.7-2.3l101.9-101.9c68.9-69 77-175.7 24.3-253.5l76.1-76.1c3.1-3.2 3.1-8.3 0-11.4M769.1 441.7l-59.4 59.4l-186.8-186.8l59.4-59.4c24.9-24.9 58.1-38.7 93.4-38.7s68.4 13.7 93.4 38.7c24.9 24.9 38.7 58.1 38.7 93.4s-13.8 68.4-38.7 93.4" />
+                    </svg>
+                    <input type="password" id="api-key-input" placeholder="Cole sua Gemini API Key (AQ.Ab8RN...)"
+                        autocomplete="off">
+                    <button type="button" id="toggle-api-key-btn" title="Mostrar/Ocultar Chave"
+                        aria-label="Mostrar ou ocultar chave API">
+                        <svg id="eye-icon-show" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <svg id="eye-icon-hide" class="hidden" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+                            <line x1="1" y1="1" x2="23" y2="23" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- LINHA DE OPÇÕES COM CHECKBOX E BOTÃO DE REMOÇÃO EXPLÍCITA -->
+                <div class="api-key-options-row">
+                    <label class="save-key-label" title="Salvar a chave no localStorage deste navegador">
+                        <input type="checkbox" id="save-key-checkbox">
+                        <span class="custom-checkbox-box"></span>
+                        <span class="save-text">Salvar chave neste navegador</span>
+                    </label>
+
+                    <button type="button" id="clear-key-btn" class="clear-key-btn hidden"
+                        title="Remover chave salva do navegador">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6" />
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        </svg>
+                        <span>Remover chave</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- INDICADOR DE STATUS DA CONEXÃO -->
+            <div class="header-status">
+                <span class="status-indicator live-pulse"></span>
+                <span class="status-text">Backend Conectado</span>
+            </div>
+        </header>
+
+        <!-- ESTRUTURA PRINCIPAL DIVIDIDA EM 2 PAINÉIS GLASS -->
+        <main class="main-content">
+            <!-- PAINEL DA ESQUERDA: DASHBOARD DE INDICADORES FINANCEIROS -->
+            <section class="dashboard-panel glass-card hover-lift-card">
+                <div class="panel-header">
+                    <div class="header-title-group">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header-svg-icon">
+                            <line x1="18" y1="20" x2="18" y2="10" />
+                            <line x1="12" y1="20" x2="12" y2="4" />
+                            <line x1="6" y1="20" x2="6" y2="14" />
+                        </svg>
+                        <h2>Indicadores do Cliente</h2>
+                    </div>
+                    <div class="header-right-actions">
+                        <span id="cliente-id-tag" class="chip">Carregando...</span>
+                        <button type="button" id="refresh-data-btn" class="refresh-data-btn"
+                            title="Sincronizar dados do cliente em tempo real">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="refresh-icon">
+                                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+                            </svg>
+                            <span>Atualizar</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARDS DE RESUMO DAS MÉTRICAS -->
+                <div class="metrics-grid">
+                    <div class="metric-card hover-glow-card">
+                        <span class="metric-label">Renda Mensal</span>
+                        <h3 id="renda-val">R$ 0,00</h3>
+                        <span class="metric-sub font-gold">Base 100%</span>
+                    </div>
+
+                    <div class="metric-card hover-glow-card">
+                        <span class="metric-label">Total Gastos</span>
+                        <h3 id="gastos-val">R$ 0,00</h3>
+                        <span id="gastos-perc" class="metric-sub font-alert">0,0% da renda</span>
+                    </div>
+
+                    <div class="metric-card hover-glow-card">
+                        <span class="metric-label">Reserva Atual</span>
+                        <h3 id="reserva-val">R$ 0,00</h3>
+                        <span id="reserva-meses" class="metric-sub font-cyan">0,0 meses cobertos</span>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO VISUAL DA REGRA 50-30-20 -->
+                <div class="rule-section">
+                    <div class="section-title">
+                        <div class="title-with-icon">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accent-icon">
+                                <path d="M12 3v18" />
+                                <path d="m19 9 3 3-3 3" />
+                                <path d="M19 12H5" />
+                                <path d="m5 15-3-3 3-3" />
+                            </svg>
+                            <h3>Orçamento 50-30-20</h3>
+                        </div>
+                        <span class="tooltip-info"
+                            data-tooltip="Divisão orçamentária sugerida: 50% Necessidades, 30% Desejos e 20% Economias">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="16" x2="12" y2="12" />
+                                <line x1="12" y1="8" x2="12.01" y2="8" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <!-- BARRA 1: NECESSIDADES ESSENCIAIS (50%) -->
+                    <div class="progress-group">
+                        <div class="progress-info">
+                            <span class="category-name">Necessidades Essenciais</span>
+                            <div class="values">
+                                <span id="val-nec">R$ 0,00</span>
+                                <span id="badge-nec" class="status-badge badge-warning">0,0% (Meta 50%)</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="bar-nec" class="progress-bar bar-necessidades" style="width: 0%;">
+                                <div class="shine-effect"></div>
+                            </div>
+                            <div class="target-marker" style="left: 50%;" title="Meta 50%"></div>
+                        </div>
+                    </div>
+
+                    <!-- BARRA 2: DESEJOS E ESTILO DE VIDA (30%) -->
+                    <div class="progress-group">
+                        <div class="progress-info">
+                            <span class="category-name">Desejos & Estilo de Vida</span>
+                            <div class="values">
+                                <span id="val-des">R$ 0,00</span>
+                                <span id="badge-des" class="status-badge badge-success">0,0% (Meta 30%)</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="bar-des" class="progress-bar bar-desejos" style="width: 0%;">
+                                <div class="shine-effect"></div>
+                            </div>
+                            <div class="target-marker" style="left: 30%;" title="Meta 30%"></div>
+                        </div>
+                    </div>
+
+                    <!-- BARRA 3: ECONOMIAS E APORTES (20%) -->
+                    <div class="progress-group">
+                        <div class="progress-info">
+                            <span class="category-name">Economias & Aportes</span>
+                            <div class="values">
+                                <span id="val-eco">R$ 0,00</span>
+                                <span id="badge-eco" class="status-badge badge-info">0,0% (Meta 20%)</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="bar-eco" class="progress-bar bar-economias" style="width: 0%;">
+                                <div class="shine-effect"></div>
+                            </div>
+                            <div class="target-marker" style="left: 20%;" title="Meta 20%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OBJETIVO PRINCIPAL DECLARADO -->
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="goal-svg">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                        <span class="goal-title">Objetivo Principal</span>
+                    </div>
+                    <p id="objetivo-val">Carregando objetivo do cliente...</p>
+                </div>
+
+                <!-- RODAPÉ DE CRÉDITOS DO DESENVOLVEDOR -->
+                <div class="developer-footer">
+                    <span>Desenvolvido por <a href="https://douglas-moura-portfolio.pages.dev" target="_blank"
+                            rel="noopener noreferrer" class="developer-link"
+                            title="Visitar o portfólio web de Douglas Chaves Moura">Douglas Chaves Moura</a></span>
+                </div>
+            </section>
+
+            <!-- PAINEL DA DIREITA: CHAT INTERATIVO DE IA -->
+            <section class="chat-panel glass-card hover-lift-card">
+                <div class="chat-header">
+                    <div class="bot-avatar glow-subtle">
+                        <span>FS</span>
+                    </div>
+                    <div class="bot-info">
+                        <h3>FinScan Assistant</h3>
+                        <p>Analista Orçamentário e Educador Financeiro</p>
+                    </div>
+                </div>
+
+                <!-- CONTAINER DE MENSAGENS -->
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message message-bot">
+                        <div id="welcome-msg-content" class="message-content">
+                            <p>Olá! Sou o <strong>FinScan</strong>, seu assistente de diagnóstico financeiro.</p>
+                            <p>Analisei suas transações recentes. Carregando dados do cliente...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTÕES RÁPIDOS E PROMPTS ESTRUTURADOS -->
+                <div class="quick-prompts">
+                    <button class="prompt-chip"
+                        onclick="sendQuickPrompt('Como posso reduzir meus gastos em necessidades essenciais?')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
+                            <polyline points="17 18 23 18 23 12" />
+                        </svg>
+                        <span>Reduzir necessidades</span>
+                    </button>
+
+                    <button class="prompt-chip" onclick="sendQuickPrompt('Minha reserva de emergência é suficiente?')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        <span>Avaliar reserva</span>
+                    </button>
+
+                    <button class="prompt-chip" onclick="sendQuickPrompt('GUARDRAIL_TOGGLE')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                        <span>Testar Guardrail</span>
+                    </button>
+                </div>
+
+                <!-- FORMULÁRIO DE ENTRADA DO CHAT COM TEXTAREA EXPANSÍVEL -->
+                <form id="chat-form" class="chat-input-area">
+                    <textarea id="user-input" rows="1" placeholder="Faça uma pergunta sobre seu perfil financeiro..."
+                        autocomplete="off" required></textarea>
+                    <button type="submit" id="send-btn" class="send-button">
+                        <span>Enviar</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Lógica JavaScript do Frontend -->
+    <script src="script.js"></script>
+</body>
+
+</html>
