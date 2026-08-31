@@ -1,4 +1,9 @@
 <a name="topo"></a>
+
+<p align="center">
+  <img src="docs/figures/capa-readme.png" alt="💎 FinScan — Analista de Perfil Financeiro" width="100%"/>
+</p>
+
 <h1 align="center">💎 FinScan — Analista de Perfil Financeiro</h1>
 
 <p align="center">
