@@ -22,17 +22,6 @@ Baseado na metodologia orçamentária **50-30-20**, o FinScan analisa extratos d
 
 ---
 
-## 📸 Demonstração da Aplicação em Vídeo
-
-<p align="center">
-  <video src="docs/figures/FinScan-IA.mp4" controls style="max-height: 400px; width: auto; max-width: 100%; object-fit: contain; border-radius: 8px;">
-    Seu navegador não suporta a exibição de vídeos HTML5.
-  </video><br/>
-  <sub><i><b>Interface:</b> Apresentação completa e demonstração interativa do FinScan (IA Generativa, Dashboard 50-30-20, e Guardrails CVM).</i></sub>
-</p>
-
----
-
 ## 🌟 Principais Recursos & Soluções de Engenharia
 
 O **FinScan** foi projetado para oferecer alta confiabilidade, ausência de bibliotecas pesadas no frontend e máxima resiliência na comunicação com os serviços de Inteligência Artificial:
